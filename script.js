@@ -1,14 +1,13 @@
 const generateForm = document.querySelector(".generate-form");
 const nextButton = generateForm.querySelector(".next-button");
 const imagePreview = document.querySelector(".image-preview");
-const category = document.querySelector(".category-select");
 
 let isImageGenerating = false;
 
 const updateImage = ({image, title}) => {
-    imagePreview.src = image;
-    imagePreview.alt = title;
-}
+  imagePreview.src = image;
+  imagePreview.alt = title;
+};
 
 const giphy = {
   baseURL: "https://api.giphy.com/v1/gifs/",
@@ -23,16 +22,16 @@ const generateImage = async () => {
 
     const getImage = await fetch(encodeURI(`${giphy.baseURL}${giphy.type}?api_key=${giphy.apiKey}&tag=${giphy.tag}&rating=${giphy.rating}`), {
       method: "GET"
-    })
+    });
 
-    if(!getImage.ok) throw new Error("Failed to get image. Please try again!");
+    if (!getImage.ok) throw new Error("Failed to get image. Please try again!");
 
     const response = await getImage.json();
-
+    
     updateImage({
       image:  response.data.images.original.url, 
       title: response.data.title
-    })
+    });
 
   } catch (error) {
 
@@ -44,7 +43,7 @@ const generateImage = async () => {
     isImageGenerating = false;
     nextButton.innerText = "Next";
   }
-}
+};
 
 const handleImageGeneration = (e) => {
 
@@ -57,7 +56,7 @@ const handleImageGeneration = (e) => {
   nextButton.innerText = "Generating";
 
   generateImage();
-}
+};
 
 generateForm.addEventListener("submit", handleImageGeneration);
 window.addEventListener("load", handleImageGeneration);
