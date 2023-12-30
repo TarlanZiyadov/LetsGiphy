@@ -1,0 +1,99 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./public/background.jpg');
+  margin: 0 auto; 
+  text-align: center;
+  min-height: 100vh;
+}
+
+img {
+  width: 80vmin;
+  height: 50vmin;
+  background-size: cover;
+  border: 1vmin solid white;
+  transition: 500ms;
+}
+
+h1 {
+  color: black;
+  background-color: white;
+  width: 80vmin;
+}
+
+button {
+  display: inline-block;
+  width: calc(50% - 4px);
+  margin: 2vmin;
+  text-align: center;
+  width: 20vmin;
+  height: 5vmin;
+  cursor: pointer;
+  letter-spacing: 5px;
+	background: #ffc421;
+	border: 0.2vmin solid black;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+	transition: 500ms;
+  font-size: 2vmin;
+  font-weight: 600;
+}
+
+footer img {
+  width: 15vmin;
+  height: 3vmin;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: none;
+}
+
+footer p {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background: #e9bd46;
+  padding: 1vmin;
+  font-size: 1.5vmin;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1300px) {
+
+  img {
+    width: 90vmin;
+    height: 60vmin;
+  }
+
+  h1 {
+    width: 90vmin;
+  }
+
+  button {
+    width: 50vmin;
+    height: 10vmin;
+    font-size: 5vmin;
+  }
+
+  footer img {
+    width: 30vmin;
+    height: 6vmin;
+  }
+  
+  footer p {
+   font-size: 3vmin;
+  }
+}
