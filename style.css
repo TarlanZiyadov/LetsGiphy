@@ -73,6 +73,19 @@ footer p {
   padding: 1vmin;
   font-size: 1.5vmin;
   pointer-events: none;
+  font-weight: 800;
+}
+
+.pg-13 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  background: #e9bd46;
+  padding: 1vmin;
+  font-size: 1.5vmin;
+  pointer-events: none;
+  font-weight: 800;
 }
 
 @media screen and (max-width: 1300px) {
@@ -98,6 +111,10 @@ footer p {
   }
   
   footer p {
-   font-size: 3vmin;
+    font-size: 3vmin;
+  }
+
+  .pg-13  {
+    font-size: 3vmin;
   }
 }
