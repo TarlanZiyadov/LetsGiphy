@@ -1,4 +1,4 @@
-# Side project
+# Lets giphy
 
 ## Github pages where user can watch random gifs from Giphy
 
