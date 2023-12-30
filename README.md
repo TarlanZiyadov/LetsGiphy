@@ -1,1 +1,1 @@
-# Side project developed for fun
+# Side project
