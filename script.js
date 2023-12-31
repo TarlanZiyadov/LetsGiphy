@@ -1,18 +1,21 @@
+/* eslint-disable quotes */
 const generateForm = document.querySelector(".generate-form");
 const nextButton = generateForm.querySelector(".next-button");
+const copyButton = generateForm.querySelector(".copy-button");
 const imagePreview = document.querySelector(".image-preview");
+const copyClipboardUrl = document.querySelector(".copy-clipboard-url");
 
 let isImageGenerating = false;
 
 const updateImage = ({image, title}) => {
   imagePreview.src = image;
   imagePreview.alt = title;
+  copyClipboardUrl.value = image;
 };
 
 const giphy = {
   baseURL: "https://api.giphy.com/v1/gifs/",
   apiKey: "0UTRbFtkMxAplrohufYco5IY74U8hOes",
-  tag: "fail",
   type: "random",
   rating: "pg-13"
 };
@@ -20,7 +23,27 @@ const giphy = {
 const generateImage = async () => {
   try {
 
-    const getImage = await fetch(encodeURI(`${giphy.baseURL}${giphy.type}?api_key=${giphy.apiKey}&tag=${giphy.tag}&rating=${giphy.rating}`), {
+    const tag = [
+      "falling", 
+      "fail", 
+      "fighting", 
+      "spinning", 
+      "parkour", 
+      "skydiving",
+      "bird", 
+      "corgi", 
+      "hamster",
+      "funny",
+      "chihuahua",
+      "asteroids",
+      "slow motion",
+      "car",
+      "robot",
+      "grumpy cat",
+      "duck",
+      "goat"][Math.floor(Math.random() * 18)];
+
+    const getImage = await fetch(encodeURI(`${giphy.baseURL}${giphy.type}?api_key=${giphy.apiKey}&tag=${tag}&rating=${giphy.rating}`), {
       method: "GET"
     });
 
@@ -58,5 +81,24 @@ const handleImageGeneration = (e) => {
   generateImage();
 };
 
+const copyClipboard = (e) => {
+  e.preventDefault();
+
+  copyClipboardUrl.select();
+  copyClipboardUrl.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(copyClipboardUrl.value);
+
+  copyButton.style.backgroundColor = "lightgreen";
+  copyButton.innerHTML = `<i class="fa fa-check">Copied</i>`;
+
+  setTimeout(function(){
+    copyButton.style.backgroundColor = "#f7d477";
+    copyButton.innerHTML = `<i class="fa fa-clipboard">Copy</i>`;
+  }, 1000);
+
+};
+
 generateForm.addEventListener("submit", handleImageGeneration);
+copyButton.addEventListener("click", copyClipboard);
 window.addEventListener("load", handleImageGeneration);

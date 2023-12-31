@@ -36,6 +36,7 @@ h1 {
   color: black;
   background-color: white;
   width: 80vmin;
+  transition: 500ms;
 }
 
 button {
@@ -88,6 +89,12 @@ footer p {
   font-weight: 600;
 }
 
+.copy-button {
+  width: 15vmin;
+  height: 5vmin;
+  background: #f7d477;
+}
+
 @media screen and (max-width: 1300px) {
 
   img {
@@ -116,5 +123,10 @@ footer p {
 
   .pg-13  {
     font-size: 3vmin;
+  }
+
+  .copy-button {
+    width: 30vmin;
+    height: 10vmin;
   }
 }
