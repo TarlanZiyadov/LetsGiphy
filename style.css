@@ -41,7 +41,6 @@ h1 {
 
 button {
   display: inline-block;
-  width: calc(50% - 4px);
   margin: 2vmin;
   text-align: center;
   width: 20vmin;
@@ -91,7 +90,6 @@ footer p {
 
 .copy-button {
   width: 15vmin;
-  height: 5vmin;
   background: #f7d477;
 }
 
@@ -128,6 +126,6 @@ footer p {
   .copy-button {
     width: 30vmin;
     height: 10vmin;
-    font-size: 4vmin;
+    font-size: 5vmin;
   }
 }

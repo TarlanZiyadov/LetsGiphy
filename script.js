@@ -90,7 +90,7 @@ const copyClipboard = (e) => {
   navigator.clipboard.writeText(copyClipboardUrl.value);
 
   copyButton.style.backgroundColor = "lightgreen";
-  copyButton.innerHTML = `<i class="fa fa-check">Copied</i>`;
+  copyButton.innerHTML = `<i class="fa fa-check"></i>`;
 
   setTimeout(function(){
     copyButton.style.backgroundColor = "#f7d477";
