@@ -128,5 +128,6 @@ footer p {
   .copy-button {
     width: 30vmin;
     height: 10vmin;
+    font-size: 4vmin;
   }
 }
