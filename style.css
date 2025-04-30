@@ -88,6 +88,18 @@ footer p {
   font-weight: 600;
 }
 
+.demo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  background: #e9bd46;
+  padding: 1vmin;
+  font-size: 1.5vmin;
+  pointer-events: none;
+  font-weight: 600;
+}
+
 .copy-button {
   width: 15vmin;
   background: #f7d477;
@@ -120,6 +132,10 @@ footer p {
   }
 
   .pg-13  {
+    font-size: 3vmin;
+  }
+
+  .demo  {
     font-size: 3vmin;
   }
 

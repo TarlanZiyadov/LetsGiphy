@@ -15,7 +15,7 @@ const updateImage = ({image, title}) => {
 
 const giphy = {
   baseURL: "https://api.giphy.com/v1/gifs/",
-  apiKey: "0UTRbFtkMxAplrohufYco5IY74U8hOes",
+  apiKey: "RvyZlKqz8I0yi5SVxOgNGM3kiReR7AGv",
   type: "random",
   rating: "pg-13"
 };
